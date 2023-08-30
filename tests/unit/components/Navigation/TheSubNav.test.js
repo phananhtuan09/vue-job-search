@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 
-import TheSubNav from '../../../src/components/TheSubNav.vue'
+import TheSubNav from '../../../../src/components/Navigation/TheSubNav.vue'
 import { describe, expect, it } from 'vitest'
 
 describe('TheSubNav', () => {

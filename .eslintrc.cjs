@@ -16,6 +16,7 @@ module.exports = {
     'vitest-globals/env': true
   },
   rules: {
-    'vue/attribute-hyphenation': 'off'
+    'vue/attribute-hyphenation': 'off',
+    'vue/v-on-event-hyphenation': 'off'
   }
 }
