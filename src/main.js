@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
+import router from './router'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -14,4 +15,4 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
 library.add(faSearch)
 
-createApp(App).component('FontAwesomeIcon', FontAwesomeIcon).mount('#app')
+createApp(App).use(router).component('FontAwesomeIcon', FontAwesomeIcon).mount('#app')

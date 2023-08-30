@@ -3,13 +3,22 @@ import { render, screen } from '@testing-library/vue'
 import MainNav from '../../../../src/components/Navigation/MainNav.vue'
 import { describe, expect, it } from 'vitest'
 import userEvent from '@testing-library/user-event'
+import { RouterLinkStub } from '@vue/test-utils'
 
 describe('MainNav', () => {
+  const $route = {
+    name: 'Home'
+  }
+
   const renderMainNav = () => {
     render(MainNav, {
       global: {
+        mocks: {
+          $route
+        },
         stubs: {
-          FontAwesomeIcon: true
+          FontAwesomeIcon: true,
+          RouterLink: RouterLinkStub
         }
       }
     })

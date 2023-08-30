@@ -2,12 +2,14 @@
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div class="flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8">
-        <a :href="url" class="flex h-full items-center text-xl">{{ company }}</a>
+        <router-link to="/" class="flex h-full items-center text-xl">{{ company }}</router-link>
 
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none first:ml-0">
-            <li v-for="item in menuItems" :key="item" class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5">{{ item }}</a>
+            <li v-for="item in menuItems" :key="item.text" class="ml-9 h-full">
+              <router-link :to="item.url" class="flex h-full items-center py-2.5">{{
+                item.text
+              }}</router-link>
             </li>
           </ul>
         </nav>
@@ -37,8 +39,28 @@ export default {
   data() {
     return {
       company: 'Google Carrers',
-      url: 'https://careers.google.com',
-      menuItems: ['Teams', 'Location', 'Benefits', 'Jobs', 'Students'],
+      menuItems: [
+        {
+          text: 'Teams',
+          url: '/'
+        },
+        {
+          text: 'Location',
+          url: '/'
+        },
+        {
+          text: 'Benefits',
+          url: '/'
+        },
+        {
+          text: 'Jobs',
+          url: '/'
+        },
+        {
+          text: 'Students',
+          url: '/'
+        }
+      ],
       isLoggedIn: false
     }
   },
