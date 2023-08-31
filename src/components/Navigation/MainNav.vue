@@ -54,7 +54,7 @@ export default {
         },
         {
           text: 'Jobs',
-          url: '/'
+          url: '/jobs/results'
         },
         {
           text: 'Students',
